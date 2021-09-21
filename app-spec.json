@@ -1,0 +1,57 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Business Calculation API",
+    "description": "Specification for example Python REST API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/calculate": {
+      "post": {
+        "operationId": "Calculate Value",
+        "parameters": [
+          {
+            "x-amf-mediaType": "application/json",
+            "in": "body",
+            "name": "generated",
+            "schema": {
+              "example": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/CalculationResult"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CalculationResult": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "calculatedValue"
+      ],
+      "properties": {
+        "calculatedValue": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
