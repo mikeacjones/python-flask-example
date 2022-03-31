@@ -30,7 +30,7 @@ jobs:
 
       - name: security test
         run: |
-          docker run --network host nonamesec.jfrog.io/noname-docker-release/active-cli scan \
+          docker run --network host nonamesec.jfrog.io/noname-docker-release/active-cli:0.8.7 scan \
             --api-url=https://active.nonamesec.com/active/api/graphql \
             --api-token=${{ secrets.ACTIVE_API_TOKEN }} \
             --test-suite-id=51413ffa-1902-4096-a0c0-77d5a8625cfb \
