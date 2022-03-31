@@ -39,4 +39,4 @@ jobs:
           --api-token=${{ secrets.ACTIVE_API_TOKEN }} \
           --test-suite-id="51413ffa-1902-4096-a0c0-77d5a8625cfb" \
           --severity-threshold="medium" \
-          --base-url="http://localhost:5000/"
+          --base-url http://localhost:5000
